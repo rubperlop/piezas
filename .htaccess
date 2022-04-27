@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^app\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*) app.php?page=$1 [QSA]
+</IfModule>
+
+#Carga tu propia página de error 404
+#ErrorDocument 404 /?page=error
+
