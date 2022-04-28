@@ -5,7 +5,7 @@ use FormacionAPP\Pieza;
 <div class="contenido-ppal">
 
     <h2>BORRAR PIEZA</h2>
-    <form method="post" action="?page=delete">
+    <form method="post" action="/delete">
         <input type="hidden" name="action" value="delete">
         <label for="codpie">Código de pieza:</label><br>
         <input type="text" name="codpie"><br><br>

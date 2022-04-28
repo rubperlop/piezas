@@ -3,6 +3,7 @@
 ini_set( 'display_errors', 1 );
 ini_set( 'display_startup_errors', 1 );
 error_reporting( E_ALL );
+session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 $page = $_REQUEST['page'] ?? '';
 include __DIR__ . "/templates/header.php";
@@ -19,6 +20,15 @@ switch ( $page ) {
         break;
     case "update":
         include "templates/update.php";
+        break;
+    case "register":
+        include "templates/register.php";
+        break;
+    case "login":
+        include "templates/login.php";
+        break;
+    case "logout":
+        include "templates/logout.php";
         break;
     case "home":
         include "templates/home.php";
